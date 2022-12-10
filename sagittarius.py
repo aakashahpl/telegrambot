@@ -43,7 +43,7 @@ index = date.weekday(date.today())
 
 
 
-token = "5847713660:AAGqLXGYEkTSLZ8vJT5xqUA9Uq7CT9yuahI"
+token = ""
 
 updater = Updater(token,
 				  use_context=True)
