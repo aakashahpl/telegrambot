@@ -79,7 +79,7 @@ def linkedIn_url(update: Update, context: CallbackContext):
 
 
 
-def unknown(update: Update, context: CallbackContext):
+def text(update: Update, context: CallbackContext):
 	day=int(date.isoweekday(date.today()))
 
 	cursor.execute("Select * from messtt where weekday = ?",[day])
@@ -137,7 +137,7 @@ dpc.add_handler(CommandHandler('instagram', insta))
 dpc.add_handler(MessageHandler(Filters.command, unknown_text))        # Filters out unknown commands
 
 
-dpc.add_handler(MessageHandler(Filters.text, unknown))                  #To manage messages.
+dpc.add_handler(MessageHandler(Filters.text, text))                  #To manage messages.
 
 updater.start_polling()
 
